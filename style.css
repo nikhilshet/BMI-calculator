@@ -21,11 +21,10 @@ input{
 }
 .inp{
     height: 200px;
-    width: 100%;
+    width: 400px;
     margin: auto;
     display: block;
     font-weight: 480;
-   
 }
 .inweight{
    float: left;

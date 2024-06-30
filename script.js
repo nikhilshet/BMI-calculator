@@ -1,9 +1,11 @@
 const w = document.getElementById('weight');
 const h = document.getElementById('height');
-let result = document.getElementsByClassName('result')[0];
+let result = document.getElementById('result');
 const submit = document.querySelector('button');
 let categ = document.getElementsByClassName('Category')[0];
 const refresh = document.getElementsByClassName('refresh')[0];
+categ.classList.add('hide');
+refresh.classList.add('hide');
 submit.addEventListener('click' , () => {
     const weight = parseFloat(w.value);
     const height = parseFloat(h.value) / 100;
@@ -31,10 +33,13 @@ submit.addEventListener('click' , () => {
         categ.textContent = `Your BMI is ${calc.toFixed(2)} so you are Obese (Class 3)`;
     }
 
-    const hid = document.getElementsByClassName('inp')[0];
+    const inpBox = document.getElementsByClassName('inp')[0];
 
-    hid.classList.add('hide');
+    inpBox.classList.add('hide');
     submit.classList.add('hide');
+    result.classList.remove('hide');
+    categ.classList.remove('hide');
+    refresh.classList.remove('hide');
 });
 
 refresh.addEventListener('click' , ()=>{
